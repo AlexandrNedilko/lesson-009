@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
 import java.util.concurrent.TimeUnit;
 
 public class MainPageTest {
@@ -51,12 +49,12 @@ public class MainPageTest {
           By firstForm= By.xpath("//*[@id='id_gender1']");
           By secondFom= By.xpath("//*[@id='customer_firstname']");
           By _3Form= By.xpath("//*[@id='customer_lastname']");
-          //By _4Form= By.xpath("//*[@id=passwd]");
-
+          By _4Form= By.xpath("//*[@id='passwd']");
+          By _5Form= By.xpath("//*[@id='address1']");
+          By _6Form= By.xpath("//*[@id='city']");
           By _33Form= By.xpath("//*[@id='alias']");
           By register= By.xpath("//*[@id='submitAccount']/span");
           By finish= By.xpath("//*[@id='center_column']/div/p");
-
 
         WebElement webElement= mainPage.openMainPage()
                         .openRegistrationButton()
@@ -67,20 +65,16 @@ public class MainPageTest {
         }
         mainPage.click(webElement, firstForm);
         mainPage.fillForm(webElement, secondFom, "Igor");
-        mainPage.fillForm(webElement, _3Form, "Popkin");
-        //mainPage.fillForm(webElement, _4Form, "123456");
-        //mainPage.fillForm(webElement, _5Form);
-        //mainPage.fillForm(webElement, _6Form);
+        mainPage.fillForm(webElement, _3Form, "Pupkin");
+        mainPage.fillForm(webElement, _4Form, "123456");
+        mainPage.fillForm(webElement, _5Form, "str. Fanta,3");
+        mainPage.fillForm(webElement, _6Form, "Kyiv");
         mainPage.fillForm(webElement, _33Form,"Obolon");
 
         mainPage.click(webElement, register);
 
-
         Assert.assertTrue(mainPage.isRegister(finish));
     }
-
-
-
 
    /* @After
     public void cleanup(){

@@ -14,9 +14,6 @@ public class MainPage {
     private By singIn = By.xpath("//*[@id='header']/div[2]/div/div/nav/div[1]/a");
     private By singIn1 = By.xpath("//*[@id='columns']/div[1]/span[2]");
 
-
-    // driver.findElement(By.xpath( "//*[@id=\"email_create\"]" ) ).sendKeys("alex@gmail.com.com");
-
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -48,7 +45,6 @@ public class MainPage {
 
     public boolean isSignIN() {
         return this.driver.findElement(singIn1).isEnabled();
-
     }
 
     public WebElement enterSomeBody_andClick(By path, String someone, By click, By firstForm) {
@@ -56,7 +52,6 @@ public class MainPage {
         webElement.sendKeys(someone);
         webElement.findElement(click).click();
        return this.driver.findElement(firstForm);
-
     }
 
     public void click (WebElement webElement, By firstForm) {
@@ -64,7 +59,6 @@ public class MainPage {
     }
 
     public void fillForm(WebElement webElement, By form, String field) {
-
 
         /*try {
             Thread.sleep(200);
@@ -78,9 +72,7 @@ public class MainPage {
         } catch (InterruptedException e) {
         }*/
         webElement.findElement(form).sendKeys(field);
-
     }
-
     public boolean isRegister(By isRegister) {
         return this.driver.findElement(isRegister).isEnabled();
     }
