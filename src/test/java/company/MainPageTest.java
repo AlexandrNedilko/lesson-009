@@ -47,7 +47,7 @@ public class MainPageTest {
           By emailButton =By.xpath("//*[@id='email_create']");
           By creatAccaut =By.xpath("//*[@id='SubmitCreate']/span");
           By firstForm= By.xpath("//*[@id='id_gender1']");
-          By secondFom= By.xpath("//*[@id='customer_firstname']");
+          By secondFom= By.xpath("//*[@id='customer_firstname']");  ////*[@id="customer_firstname"]
           By _3Form= By.xpath("//*[@id='customer_lastname']");
           By _4Form= By.xpath("//*[@id='passwd']");
           By _5Form= By.xpath("//*[@id='address1']");
